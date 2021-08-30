@@ -90,10 +90,7 @@
                                     var project_title = response['data'][i].project_title;
                                     var project_pdf = response['data'][i].project_pdf;
                                     var project_vid = response['data'][i].project_vid;
-                                    var eval_status=response['data'][i].eval_status;
-
-                                    if(eval_status=="UNCHECKED")
-                                    {
+                                    
                                         var row = "<tr><td>"
                                                 +project_id+
                                                 "</td><td>"
@@ -106,31 +103,11 @@
                                                 +"</td><td id='removelinks'>"
                                                 +"<a class='btn btn-primary btn-sm' href='download_vid/"+project_vid+"'>Download</a>"
                                                 +"</td><td id='removelinks'>"
-                                                +"<a class='btn btn-success btn-sm' id='evalBtn["+i+"]' href='give_marks/"+project_id+"'>Evaluate</a>"
+                                                +"<a class='btn btn-success btn-sm' id='evalBtn["+i+"]' href='get_members/"+project_id+"'>Show Participants</a>"
                                                 +"</td></tr>"; 
                                                                              
                                             $("#projects").append(row); 
-                                    }
-                                    else
-                                    {
-                                        var row = "<tr><td>"
-                                                +project_id+
-                                                "</td><td>"
-                                                +department+
-                                                "</td><td>"
-                                                +project_title+
-                                                "</td><td id='removelinks'>"
-                                                +"<a class='btn btn-info btn-sm' target='_blank' href='view_pdf/"+project_pdf+"'>View</a>"
-                                                +"&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='download_pdf/"+project_pdf+"'>Download</a>"
-                                                +"</td><td id='removelinks'>"
-                                                +"<a class='btn btn-primary btn-sm' href='download_vid/"+project_vid+"'>Download</a>"
-                                                +"</td><td id='removelinks'>"
-                                                    +"<a class='btn btn-info btn-sm'  href='edit_judge_marks/"+project_id+"'>Edit</a>"
-                                                +"</td></tr>"; 
-                                                                             
-                                            $("#projects").append(row);
-                                    }
-                                            
+                                   
                                     
                                 }
                             }

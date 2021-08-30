@@ -18,8 +18,10 @@ class CreateAllocatedprojectsTable extends Migration
             $table->string("academic_year",10);
             $table->string("department",10);
             $table->string("project_id",20);
+            $table->string("project_title",400);
             $table->string("jemail",50);
             $table->string("eval_status",15);
+            $table->string("res_dec_status",20)->nullable();
         
             
         });

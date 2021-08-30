@@ -10,23 +10,27 @@ use App\Models\Judges;
 use App\Models\Mentors;
 class MainController extends Controller
 {
+    public function about_us()
+    {
+        return view('AboutUs');
+    }
     public function home_page()
     {
         return view('MainHomePage');
-    } 
+    }
 
     public function student_registration()
     {
         return view('studentregister');
     }
-    
+
     public function login()
     {
         return view('login');
     }
-    
+
     function student_registration_submit(request $req)
-    {         
+    {
         $id=Students::select('id')->latest('id')->first();
         if($id==null)
         {
@@ -46,28 +50,30 @@ class MainController extends Controller
         {
             $student=new Students();
             $student->academic_year=$req->academic_year;
-            $student->department=$req->department;        
-            
+            $student->department=$req->department;
+
             $student->group_count=$req->group_count;
             $student->project_id=$project_id;
-        
+
             $student->ucid=$ucid[$i];
             $student->category=$category[$i];
             $student->name=$name[$i];
-        
+
             $student->email=$email[$i];
             $student->mobile=$mobile[$i];
+            $student->proj_eval_status="UNCHECKED";
             $student->save();
         }
         $project=new Projects();
         $project->academic_year=$req->academic_year;
-        $project->department=$req->department;  
+        $project->department=$req->department;
         $project->project_id=$project_id;
         $project->mentor_dept=$req->mentor_dept;
         $project->mentor_name=$req->mentor_name;
         $project->project_title=$req->project_title;
         $project->project_desc=$req->project_desc;
         $project->project_out=$req->project_out;
+
 
         $pdf=$req->project_pdf;
         $pdfname='PDF'.$project_id.time().'.'.$pdf->getClientOriginalExtension();
@@ -78,14 +84,14 @@ class MainController extends Controller
         $vidname='VID'.$project_id.time().'.'.$vid->getClientOriginalExtension();
         $req->project_vid->move('uploads',$vidname);
         $project->project_vid=$vidname;
-        
-        
+
+
         $project->project_assign_status="UNASSIGNED";
         $project->save();
-        $req->session()->flash("student-success","Your Project ID is  $project_id Your Project Details Submitted Successfully."); 
-       
+        $req->session()->flash("student-success","Your Project ID is  $project_id Your Project Details Submitted Successfully.");
+
         return redirect()->to("student_registration");
-    } 
+    }
 
     function others_login_submit(Request $req)
     {
@@ -112,7 +118,7 @@ class MainController extends Controller
                 $req->session()->put('deanLogData',[$info]);
                 return redirect()->to("dean_home_page");
             }
-            
+
         }
         else
         {
@@ -149,11 +155,11 @@ class MainController extends Controller
         )->first();
         if($info!=null)
         {
-            
+
                 $req->session()->put('judgeLogData',[$info]);
                 return redirect()->to("judge_home_page");
-            
-            
+
+
         }
         else
         {
@@ -167,10 +173,10 @@ class MainController extends Controller
         $MentorData['data'] = Mentors::orderby("id","asc")
         			->select('m_name')
         			->where(
-                        'm_department','=',$req->mentordept                       
+                        'm_department','=',$req->mentordept
                     )
         			->get();
-  
+
         return response()->json($MentorData);
     }
 

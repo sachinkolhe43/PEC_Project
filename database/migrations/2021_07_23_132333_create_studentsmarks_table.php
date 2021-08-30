@@ -26,6 +26,7 @@ class CreateStudentsmarksTable extends Migration
             $table->integer("p5");
             $table->integer("total");
             
+            
 
 
 

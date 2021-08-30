@@ -24,6 +24,7 @@ class CreateStudentsTable extends Migration
             $table->string("name",100);
             $table->string("email",50);
             $table->string("mobile",10);
+            $table->string("proj_eval_status",20)->nullable();
         });
     }
 

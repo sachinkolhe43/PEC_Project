@@ -26,6 +26,9 @@ class CreateProjectsTable extends Migration
             $table->string("project_pdf",100);
             $table->string("project_vid",100);
             $table->string("project_assign_status",15);
+            $table->string("res_dec_status",20)->nullable();
+            
+            
         });
     }
 

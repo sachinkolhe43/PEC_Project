@@ -17,10 +17,9 @@ class CreateProjectmarksTable extends Migration
             $table->id();
             $table->string("academic_year",10);
             $table->string("department",10);
-            $table->string("project_id",20);
-            $table->integer("project_marks");
-            $table->string("evaluated_by",50);
-            $table->string("res_dec_status",20)->nullable();
+            $table->string("project_id",20)->unique();
+            $table->float('project_marks', 5, 2);
+            $table->string("res_dec_date",20)->nullable();
 
 
         });

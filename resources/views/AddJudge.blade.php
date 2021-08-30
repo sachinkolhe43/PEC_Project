@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Judge</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
 </head>
 <body>
 @extends('AdminLayout')
@@ -47,7 +47,7 @@
                                 <option selected disabled value="">Choose...</option>
                                 <option value="Academic">Academic</option>
                                 <option value="Industry">Industry</option>
-                                
+
                             </select>
                             <span class="error-msg" id="dept-msg">
                             </span>
@@ -83,8 +83,8 @@
                                 <option selected disabled value="">Choose...</option>
                                 <option value="(0-5)years">(0-5)years</option>
                                 <option value="(5-10)years">(5-10)years</option>
-                                <option value="greater than 10 years">greater than 10 years </option>
-                                
+                                <option value="more than 10 years">greater than 10 years </option>
+
                             </select>
                             <span class="error-msg" id="dept-msg">
                             </span>
@@ -96,14 +96,14 @@
                             </span>
                         </div>
 
-                        
-                       
+
+
 
                         <div class="col-12">
                             <button class="btn btn-outline-success w-100" type="submit">Save</button>
                         </div>
                     </form>
-                    
+
                 </blockquote>
                 </div>
             </div>
