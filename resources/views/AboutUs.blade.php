@@ -20,43 +20,117 @@
             </div><!-- End Post Heading -->
             <div class="post-content">
 
-                <p>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{asset('images/b1.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images2/p2.jpg')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images2/p3.jpg')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images2/p4.jpg')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images2/p5.jpg')}}" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                </p>
 
+                <body>
+
+                <div id="wrapper" class="home-page">
+
+
+
+                    <!-- Our team Section -->
+                    <section id="team" class="team content-section">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-md-12">
+                                    <h2><b>Our Team</b></h2>
+
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="team-member">
+                                                <figure>
+
+                                                    <img src="../images2/aarti.jpg" alt="" class="img-responsive">
+                                                    <figcaption>
+                                                        <p>Assistant Professor in Bharatiya Vidya Bhavan's - Sardar Patel Institute of Technology, Andheri</p>
+
+                                                    </figcaption>
+                                                </figure>
+                                                <h4>Aarti Karande</h4>
+                                                <p>Mentor</p>
+                                            </div><!-- /.team-member-->
+                                        </div><!-- /.col-md-4 -->
+                                        <div class="col-md-4">
+                                            <div class="team-member">
+                                                <figure>
+                                                    <img src="../images2/Bhumesh.jpeg" alt="" class="img-responsive">
+                                                    <figcaption>
+                                                        <p>Pursuing Master of Computer Application </p>
+
+                                                    </figcaption>
+                                                </figure>
+                                                <h4>Bhumesh Bodalia</h4>
+                                                <p>DevOps</p>
+                                            </div><!-- /.team-member-->
+                                        </div><!-- /.col-md-4 -->
+
+
+
+                                        <div class="col-md-4">
+                                            <div class="team-member">
+                                                <figure>
+                                                    <img src="../images2/Sachin.jpg" alt="" class="img-responsive">
+                                                    <figcaption>
+                                                        <p>Pursuing Master of Computer Application </p>
+
+                                                    </figcaption>
+                                                </figure>
+                                                <h4>Sachin Kolhe</h4>
+                                                <p>DevOps</p>
+                                            </div><!-- /.team-member-->
+                                        </div><!-- /.col-md-4 -->
+
+
+                                    </div><!-- /.row -->
+                                </div><!-- /.container -->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section><!-- /.our-team -->
+
+                </div>
+
+
+
+
+
+                <div class="clear"></div>
+                </body>
+
+                <!-- Footer -->
+                <!-- <footer class="font-small text-white mt-5"> -->
+                <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+
+
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('.dropdown-toggle').dropdown();
+                    });
+                </script>
+
+                <script
+                    src="https://code.jquery.com/jquery-3.3.1.min.js"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous"></script>
+
+
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                <script src="https://research.spit.ac.in/js/custom.js"></script>
+
+                <script src="js/particles.js"></script>
+                <script src="js/app.js"></script>
+
+
+
+
+
+                </html>
 
 
 

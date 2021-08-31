@@ -214,12 +214,12 @@ class AdminController extends Controller
 
     public function mentor_report()
     {
-        return view('viewMentorDetails');
+        return view('ViewMentorDetails');
     }
 
     public function judge_report()
     {
-        return view('viewJudgeDetails');
+        return view('ViewJudgeDetails');
     }
 
     public function others_report()

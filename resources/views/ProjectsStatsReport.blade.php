@@ -85,7 +85,7 @@
     </style>
 </head>
 <body>
-@extends('RDLayout')
+@extends('AdminLayout')
 
 @section('content')
     <section class="container">
