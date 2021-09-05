@@ -51,8 +51,14 @@
                                     <div class="col-md-2 mt-4">
                                         <label for="academic_year" class="form-label">Academic Year</label>
                                         <input type="text" readonly class="form-control" id="academic_year" name="academic_year" required>
-
                                         <script>
+                                            var d = new Date();
+                                            var curYear = d.getFullYear();
+                                            var academic_year = curYear - 1 + '-' + (curYear.toString().substr(-2));
+                                            document.getElementById('academic_year').value = academic_year;
+            
+                                        </script>
+                                        {{-- <script>
                                             var d = new Date();
                                             var curYear = d.getFullYear();
                                             var curMonth = d.getMonth();
@@ -68,7 +74,7 @@
 
                                             document.getElementById('academic_year').value= academic_year;
 
-                                        </script>
+                                        </script> --}}
                                     </div>
 
                                     <div class="col-md-2 mt-4">
