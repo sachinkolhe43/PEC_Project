@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-md-6 mt-4">
                                     <label for="jmobile" class="form-label">Mobile No.</label>
-                                    <input type="mobile" class="form-control" id="jmobile" name="jmobile" value="{{ $user['jmobile']}}" required>
+                                    <input type="mobile" class="form-control" pattern="\d{10}" title="Enter a valid phone number"  id="jmobile" name="jmobile" value="{{ $user['jmobile']}}" required>
                                     <span class="error-msg" id="dept-msg">
                                     </span>
                                 </div>

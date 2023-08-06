@@ -149,7 +149,7 @@
                                             </div>
                                             <div class="col-md-6 mt-4">
                                                 <label for="mobile[]" class="form-label">Mobile No.</label>
-                                                <input type="mobile" class="form-control" id="mobile[]" name="mobile[]"
+                                                <input type="mobile" class="form-control" pattern="\d{10}" title="Enter a valid phone number" id="mobile[]" name="mobile[]"
                                                     required>
                                                 <span class="error-msg" id="dept-msg">
                                                 </span>
